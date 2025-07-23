@@ -1,0 +1,60 @@
+#### Crear Categorias
+
+http://localhost:3000/api/categories
+
+{
+  "name": "Facturación",
+  "description": "Archivos relacionados con facturación mensual.",
+  "companyId": 1
+}
+
+#### Editar Categorias
+
+http://localhost:3000/api/categories/id
+
+{
+  "name": "Nombre",
+  "description": "Descripcion"
+}
+
+#### Eliminar Categorias
+
+http://localhost:3000/api/categories/id
+
+#### Subir Archivos
+
+http://localhost:3000/api/files/upload
+
+{
+  "companyId": "1",
+  "categoryId": "4",
+  "originalName": "informe_mensual.xlsx",
+  "localPath": "/uploads/2025/07/informe_mensual.xlsx",
+  "extension": "xlsx",
+  "uploadDate": "2025-07-23T10:30:00Z",
+  "processingStatus": false
+}
+
+
+### Crear analisis
+
+http://localhost:3000/api/analysis/create/
+
+{
+  "fileId": "1",
+  "summary": "This file contains the monthly sales report for July, including revenue trends, top-performing regions, and product insights.",
+  "analysisDate": "2025-07-23T15:45:00Z"
+}
+
+
+### Crear insights
+
+http://localhost:3000/api/insights/create/
+
+{
+  "analysisId": "1",
+  "title": "Monthly Financial Report Analysis - July 2025",
+  "type": "Financial",
+  "impact": "The company experienced a 12% decrease in net revenue compared to the previous month, mainly due to reduced client retention and increased operational costs.",
+  "recommendation": "Review client retention strategies, reduce non-essential expenses, and renegotiate supplier contracts to stabilize margins."
+}
