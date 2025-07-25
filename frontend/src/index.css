@@ -5,3 +5,7 @@ body {
   background-color: #3e3f4e;
   font-family: "Nunito", sans-serif;
 }
+
+.bg__grid {
+  @apply bg-white/10;
+}
